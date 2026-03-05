@@ -1,311 +1,165 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-
-<title>Firediting | Nikhil Video Editor</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Firediting | Nikhil</title>
 
 <style>
 
-*{
+body{
 margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Poppins;
-scroll-behavior:smooth;
+font-family:Arial;
+background:#071021;
+color:white;
 }
 
-body{
-background:linear-gradient(135deg,#0a0f1f,#0e1b34);
-color:white;
+.container{
+max-width:1100px;
+margin:auto;
 padding:40px;
 }
 
-/* sidebar */
-
-.sidebar{
-position:fixed;
-left:20px;
-top:50%;
-transform:translateY(-50%);
-background:#0c162d;
-padding:15px;
-border-radius:40px;
-box-shadow:0 0 25px #00c3ff;
-}
-
-.sidebar a{
-display:block;
-margin:18px 0;
-font-size:22px;
-text-align:center;
-text-decoration:none;
-color:white;
-}
-
-/* sections */
-
-.section{
-backdrop-filter: blur(12px);
-background: rgba(15,28,54,0.75);
-border:1px solid rgba(255,255,255,0.08);
-border-radius:25px;
-padding:70px;
-margin-bottom:60px;
-box-shadow:0 0 35px rgba(0,170,255,0.2);
-}
-
-/* logo */
-
-.logo{
-text-align:center;
-font-size:22px;
-letter-spacing:4px;
-color:#00c3ff;
-text-shadow:0 0 15px #00c3ff;
-margin-bottom:20px;
-}
-
-/* hero */
-
 .hero{
 text-align:center;
-}
-
-.hero img{
-width:140px;
-border-radius:50%;
-box-shadow:0 0 30px #00c3ff;
-margin-bottom:20px;
+padding:80px 20px;
 }
 
 .hero h1{
-font-size:48px;
-}
-
-.highlight{
-color:#00c3ff;
+font-size:55px;
+color:#2ea6ff;
 }
 
 .hero p{
-margin-top:10px;
-color:#9fb3c8;
+opacity:0.8;
 }
 
 .btn{
-display:inline-block;
-padding:12px 28px;
-background:#00c3ff;
-border-radius:30px;
-text-decoration:none;
+padding:12px 25px;
+background:#2ea6ff;
+border-radius:25px;
 color:white;
-margin:20px 10px;
+text-decoration:none;
+display:inline-block;
+margin-top:20px;
 }
 
-/* skills */
+.section{
+margin-top:80px;
+}
+
+.skills{
+max-width:500px;
+margin:auto;
+}
 
 .skill{
 margin:20px 0;
 }
 
 .bar{
-height:8px;
-background:#1d2f5b;
+background:#0f1c34;
+height:10px;
 border-radius:10px;
-overflow:hidden;
 }
 
 .progress{
-height:8px;
-background:#00c3ff;
+height:10px;
+background:#2ea6ff;
+border-radius:10px;
 }
 
-/* video */
-
-.reel{
-display:flex;
-justify-content:center;
-margin-top:30px;
-}
-
-/* portfolio */
-
-.grid{
+.portfolio{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+gap:20px;
 margin-top:30px;
 }
 
 .card{
-background:#132349;
-border-radius:15px;
-overflow:hidden;
-transition:0.3s;
+background:#0f1c34;
+padding:20px;
+border-radius:10px;
 }
 
-.card:hover{
-transform:scale(1.06);
-box-shadow:0 0 25px #00c3ff;
-}
-
-.card iframe{
-width:100%;
-height:200px;
-border:none;
-}
-
-.card h3{
-padding:15px;
-}
-
-/* contact */
-
-.contact{
+footer{
 text-align:center;
-}
-
-.whatsapp{
-background:#25D366;
-}
-
-.footer{
-text-align:center;
-margin-top:40px;
-color:#7f93b6;
+margin-top:80px;
+opacity:0.6;
 }
 
 </style>
-
 </head>
 
 <body>
 
-<div class="sidebar">
+<div class="container">
 
-<a href="#home">🏠</a>
-<a href="#skills">⭐</a>
-<a href="#reel">🎥</a>
-<a href="#portfolio">🎬</a>
-<a href="#contact">📩</a>
+<section class="hero">
 
-</div>
+<h1>Hi, I'm Nikhil</h1>
+<p>Professional Video Editor</p>
 
-<!-- HERO -->
+<p>I create cinematic edits, Instagram reels and gaming montages.</p>
 
-<section class="section hero" id="home">
-
-<div class="logo">🔥 FIREEDITING</div>
-
-<img src="https://i.pravatar.cc/200">
-
-<h1>Hi I'm <span class="highlight">Nikhil</span></h1>
-
-<p>Professional Video Editor creating cinematic edits, reels and motion graphics.</p>
-
-<a class="btn" href="#portfolio">View Portfolio</a>
-
-<a class="btn" href="https://instagram.com/firediting">Instagram</a>
+<a class="btn">View My Work</a>
 
 </section>
 
-<!-- SKILLS -->
+<section class="section">
 
-<section class="section" id="skills">
+<h2>My Skills</h2>
 
-<h2 style="text-align:center">My Skills</h2>
+<div class="skills">
 
 <div class="skill">
-CapCut
-<div class="bar"><div class="progress" style="width:90%"></div></div>
+<p>Premiere Pro</p>
+<div class="bar">
+<div class="progress" style="width:90%"></div>
+</div>
 </div>
 
 <div class="skill">
-After Effects
-<div class="bar"><div class="progress" style="width:85%"></div></div>
+<p>After Effects</p>
+<div class="bar">
+<div class="progress" style="width:80%"></div>
+</div>
 </div>
 
 <div class="skill">
-Alight Motion
-<div class="bar"><div class="progress" style="width:80%"></div></div>
+<p>CapCut</p>
+<div class="bar">
+<div class="progress" style="width:95%"></div>
 </div>
-
-<div class="skill">
-Motion Graphics
-<div class="bar"><div class="progress" style="width:88%"></div></div>
-</div>
-
-</section>
-
-<!-- FEATURED REEL -->
-
-<section class="section" id="reel">
-
-<h2 style="text-align:center">Featured Reel</h2>
-
-<div class="reel">
-
-<iframe width="560" height="315"
-src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-allowfullscreen></iframe>
-
-</div>
-
-</section>
-
-<!-- PORTFOLIO -->
-
-<section class="section" id="portfolio">
-
-<h2 style="text-align:center">My Edits</h2>
-
-<div class="grid">
-
-<div class="card">
-<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
-<h3>Instagram Reel Edit</h3>
-</div>
-
-<div class="card">
-<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
-<h3>Cinematic Edit</h3>
-</div>
-
-<div class="card">
-<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
-<h3>Gaming Montage</h3>
-</div>
-
-<div class="card">
-<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
-<h3>YouTube Edit</h3>
 </div>
 
 </div>
 
 </section>
 
-<!-- CONTACT -->
+<section class="section">
 
-<section class="section contact" id="contact">
+<h2>My Portfolio</h2>
 
-<h2>Hire Me</h2>
+<div class="portfolio">
 
-<p>If you need a professional video editor for reels, ads or YouTube videos.</p>
+<div class="card">Instagram Reel Edit</div>
 
-<a class="btn whatsapp" href="https://wa.me/YOURNUMBER">
-Hire Me On WhatsApp
-</a>
+<div class="card">Gaming Montage</div>
+
+<div class="card">Cinematic Video</div>
+
+<div class="card">YouTube Video Editing</div>
+
+</div>
 
 </section>
 
-<div class="footer">
+<footer>
 
-© Firediting — Portfolio by Nikhil
+<p>© 2026 Firediting | Nikhil</p>
+
+</footer>
 
 </div>
 
