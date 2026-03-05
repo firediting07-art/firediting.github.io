@@ -10,24 +10,54 @@
 body{
 margin:0;
 font-family:Arial;
-background:#071021;
+background:#071224;
 color:white;
+display:flex;
 }
 
-.container{
-max-width:1100px;
-margin:auto;
+/* SIDEBAR */
+
+.sidebar{
+width:80px;
+background:#0b1c36;
+height:100vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+padding-top:40px;
+box-shadow:0 0 20px #00bfff33;
+}
+
+.icon{
+width:40px;
+height:40px;
+margin:15px 0;
+background:#132a4d;
+border-radius:10px;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#00bfff;
+font-size:18px;
+}
+
+/* MAIN */
+
+.main{
+flex:1;
 padding:40px;
 }
 
+/* HERO */
+
 .hero{
 text-align:center;
-padding:80px 20px;
+margin-top:60px;
 }
 
 .hero h1{
 font-size:55px;
-color:#2ea6ff;
+color:#45c2ff;
 }
 
 .hero p{
@@ -35,22 +65,20 @@ opacity:0.8;
 }
 
 .btn{
+background:#1da1ff;
 padding:12px 25px;
-background:#2ea6ff;
 border-radius:25px;
-color:white;
 text-decoration:none;
+color:white;
 display:inline-block;
 margin-top:20px;
 }
 
-.section{
-margin-top:80px;
-}
+/* SKILLS */
 
 .skills{
+margin-top:100px;
 max-width:500px;
-margin:auto;
 }
 
 .skill{
@@ -58,33 +86,78 @@ margin:20px 0;
 }
 
 .bar{
-background:#0f1c34;
-height:10px;
+background:#132a4d;
+height:8px;
 border-radius:10px;
 }
 
 .progress{
-height:10px;
-background:#2ea6ff;
+height:8px;
+background:#3cc7ff;
 border-radius:10px;
 }
 
+/* PORTFOLIO */
+
 .portfolio{
+margin-top:80px;
+}
+
+.grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
 margin-top:30px;
 }
 
-.card{
-background:#0f1c34;
-padding:20px;
+iframe{
+width:100%;
+height:200px;
+border:none;
 border-radius:10px;
 }
 
-footer{
-text-align:center;
+/* CONTACT */
+
+.contact{
 margin-top:80px;
+text-align:center;
+}
+
+.contact a{
+display:inline-block;
+margin:10px;
+padding:12px 25px;
+border-radius:25px;
+text-decoration:none;
+color:white;
+}
+
+.whatsapp{
+background:#25D366;
+}
+
+.email{
+background:#ff4b4b;
+}
+
+/* FLOAT BUTTON */
+
+.float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+padding:15px 20px;
+border-radius:30px;
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+footer{
+margin-top:80px;
+text-align:center;
 opacity:0.6;
 }
 
@@ -93,24 +166,32 @@ opacity:0.6;
 
 <body>
 
-<div class="container">
+<div class="sidebar">
+
+<div class="icon">🏠</div>
+<div class="icon">⚡</div>
+<div class="icon">🎬</div>
+<div class="icon">📞</div>
+
+</div>
+
+<div class="main">
 
 <section class="hero">
 
 <h1>Hi, I'm Nikhil</h1>
+
 <p>Professional Video Editor</p>
 
-<p>I create cinematic edits, Instagram reels and gaming montages.</p>
+<p>I create cinematic edits, Instagram reels, gaming montages and YouTube videos.</p>
 
 <a class="btn">View My Work</a>
 
 </section>
 
-<section class="section">
+<section class="skills">
 
 <h2>My Skills</h2>
-
-<div class="skills">
 
 <div class="skill">
 <p>Premiere Pro</p>
@@ -122,7 +203,7 @@ opacity:0.6;
 <div class="skill">
 <p>After Effects</p>
 <div class="bar">
-<div class="progress" style="width:80%"></div>
+<div class="progress" style="width:85%"></div>
 </div>
 </div>
 
@@ -133,25 +214,31 @@ opacity:0.6;
 </div>
 </div>
 
+</section>
+
+<section class="portfolio">
+
+<h2>My Portfolio</h2>
+
+<div class="grid">
+
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+
 </div>
 
 </section>
 
-<section class="section">
+<section class="contact">
 
-<h2>My Portfolio</h2>
+<h2>Hire Me</h2>
 
-<div class="portfolio">
+<a class="whatsapp" href="https://wa.me/919084621551">WhatsApp</a>
 
-<div class="card">Instagram Reel Edit</div>
-
-<div class="card">Gaming Montage</div>
-
-<div class="card">Cinematic Video</div>
-
-<div class="card">YouTube Video Editing</div>
-
-</div>
+<a class="email" href="mailto:firediting07@gmail.com">Email Me</a>
 
 </section>
 
@@ -162,6 +249,8 @@ opacity:0.6;
 </footer>
 
 </div>
+
+<a class="float" href="https://wa.me/919084621551">Chat</a>
 
 </body>
 </html>
