@@ -123,6 +123,270 @@
             padding: 2rem 0;
         }
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firediting | Nikhil - Professional Video Editor</title>
+    <script src="https://unpkg.com"></script>
+    <script src="https://unpkg.com"></script>
+    <link href="https://unpkg.com" rel="stylesheet">
+    <style>
+        :root {
+            --neon-blue: #00f2ff;
+            --dark-bg: #050505;
+            --glass: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* Glass UI Components */
+        .glass-card {
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .glass-card:hover {
+            border-color: var(--neon-blue);
+            transform: translateY(-5px);
+        }
+
+        /* Navbar */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.5rem 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            background: rgba(5, 5, 5, 0.8);
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: var(--neon-blue);
+            text-transform: uppercase;
+        }
+
+        /* Hero Section */
+        #hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: radial-gradient(circle at center, #003344 0%, #050505 70%);
+        }
+
+        .hero-name {
+            font-size: 5rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(to bottom, #fff, #888);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-title {
+            color: var(--neon-blue);
+            font-size: 1.2rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        /* Progress Bars */
+        .skill-container {
+            margin: 1.5rem 0;
+        }
+
+        .skill-bar-bg {
+            height: 8px;
+            background: #222;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 8px;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: var(--neon-blue);
+            box-shadow: 0 0 15px var(--neon-blue);
+            width: 0;
+            transition: width 1.5s ease-in-out;
+        }
+
+        /* Portfolio Grid */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 2rem 0;
+        }
+
+        .video-card {
+            aspect-ratio: 9/16;
+            overflow: hidden;
+            position: relative;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Buttons */
+        .cta-btn {
+            padding: 12px 30px;
+            border-radius: 50px;
+            border: none;
+            background: var(--neon-blue);
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .cta-btn:hover {
+            box-shadow: 0 0 25px var(--neon-blue);
+            transform: scale(1.05);
+        }
+
+        section {
+            padding: 100px 10%;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            border-left: 4px solid var(--neon-blue);
+            padding-left: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">FIRE<span style="color:white">DITING</span></div>
+        <div style="display:flex; gap: 20px;">
+            <a href="#portfolio" style="color:white; text-decoration:none">Work</a>
+            <a href="#contact" style="color:white; text-decoration:none">Contact</a>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <h1 class="hero-name" data-aos="zoom-in">NIKHIL</h1>
+        <p class="hero-title" data-aos="fade-up" data-aos-delay="200">Professional Video Editor</p>
+    </section>
+
+    <section id="about">
+        <div class="glass-card" style="padding: 40px;" data-aos="fade-up">
+            <h2>The Vision</h2>
+            <p style="line-height: 1.8; color: #ccc; font-size: 1.1rem;">
+                At <strong>Firediting</strong>, I transform raw footage into cinematic stories. Specializing in high-paced social media content and professional long-form videos, I focus on retention, flow, and visual impact.
+            </p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Technical Mastery</h2>
+        <div class="skill-container">
+            <span>Adobe Premiere Pro</span>
+            <div class="skill-bar-bg"><div class="skill-progress" style="width: 95%"></div></div>
+        </div>
+        <div class="skill-container">
+            <span>After Effects</span>
+            <div class="skill-bar-bg"><div class="skill-progress" style="width: 85%"></div></div>
+        </div>
+        <div class="skill-container">
+            <span>CapCut (Mobile/Desktop)</span>
+            <div class="skill-bar-bg"><div class="skill-progress" style="width: 90%"></div></div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <h2>Featured Reels</h2>
+        <div class="portfolio-grid">
+            <div class="glass-card video-card" data-aos="flip-left">
+                <video src="placeholder-video-1.mp4" muted loop onmouseover="this.play()" onmouseout="this.pause()"></video>
+            </div>
+            <div class="glass-card video-card" data-aos="flip-left" data-aos-delay="100">
+                <video src="placeholder-video-2.mp4" muted loop onmouseover="this.play()" onmouseout="this.pause()"></video>
+            </div>
+            <div class="glass-card video-card" data-aos="flip-left" data-aos-delay="200">
+                <video src="placeholder-video-3.mp4" muted loop onmouseover="this.play()" onmouseout="this.pause()"></video>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2>Services</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+            <div class="glass-card" style="padding: 30px;">
+                <h3>Instagram Reels</h3>
+                <p style="margin-top:10px; color:#aaa">Viral hooks, subtitles, and trending transitions.</p>
+            </div>
+            <div class="glass-card" style="padding: 30px;">
+                <h3>Gaming Montages</h3>
+                <p style="margin-top:10px; color:#aaa">Perfect beat sync and high-energy SFX.</p>
+            </div>
+            <div class="glass-card" style="padding: 30px;">
+                <h3>YouTube Editing</h3>
+                <p style="margin-top:10px; color:#aaa">Engagement-focused storytelling and pacing.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" style="text-align: center;">
+        <h2 style="border:none; padding:0">Ready to ignite your content?</h2>
+        <div style="display: flex; justify-content: center; gap: 20px; margin-top: 40px;">
+            <a href="https://wa.me" class="cta-btn">
+                <i data-lucide="message-circle"></i> WhatsApp Me
+            </a>
+            <a href="mailto:nikhil@firediting.com" class="cta-btn" style="background: transparent; border: 1px solid var(--neon-blue); color: white;">
+                <i data-lucide="mail"></i> Email
+            </a>
+        </div>
+    </section>
+
+    <script>
+        lucide.createIcons();
+        AOS.init({ duration: 1000, once: true });
+    </script>
+</body>
+</html>
+
+Would you like me to add a custom video player control or integrate a specific booking form for your clients?
+
+
+
         .video-card {
             aspect-ratio: 9/16;
             overflow: hidden;
