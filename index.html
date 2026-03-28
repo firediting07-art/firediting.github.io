@@ -1,110 +1,103 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Firediting | Professional Video Editor</title>
-    <link href="https://fonts.googleapis.com" rel="stylesheet">
+    <title>Firediting | Video Editing Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        :root { --fire: #ff4500; --dark: #0a0a0a; --gray: #1a1a1a; }
-        body { font-family: 'Poppins', sans-serif; margin: 0; background: var(--dark); color: #fff; text-align: center; }
-        
-        header { padding: 60px 20px; background: linear-gradient(to bottom, #220000, var(--dark)); }
-        .brand { font-size: 3.5rem; color: var(--fire); text-transform: uppercase; margin: 0; text-shadow: 0 0 15px rgba(255, 69, 0, 0.6); }
-
-        .container { max-width: 1200px; margin: auto; padding: 20px; }
-        h2 { border-left: 5px solid var(--fire); padding-left: 15px; text-align: left; margin-top: 50px; }
-
-        /* Featured Video Area */
-        .featured-video { width: 100%; border-radius: 15px; overflow: hidden; border: 2px solid var(--fire); margin-bottom: 40px; box-shadow: 0 0 30px rgba(255, 69, 0, 0.2); }
-        video { width: 100%; display: block; background: #000; }
-
-        /* Reels Grid (Vertical) */
-        .reels-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; }
-        .reel-card { background: var(--gray); border-radius: 12px; overflow: hidden; border: 1px solid #333; }
-        .reel-card video { height: 350px; object-fit: cover; }
-
-        /* Thumbnails & Projects */
-        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .card { background: var(--gray); border-radius: 10px; overflow: hidden; }
-        .card img { width: 100%; transition: 0.3s; }
-        .card:hover img { transform: scale(1.05); }
-
-        /* Contact Box */
-        .contact-section { background: #111; padding: 50px 20px; border-radius: 20px; margin-top: 60px; border: 1px solid var(--fire); }
-        .btn { display: inline-block; padding: 15px 35px; margin: 10px; border-radius: 8px; text-decoration: none; font-weight: bold; color: white; transition: 0.3s; }
-        .whatsapp { background: #25D366; }
-        .email { background: var(--fire); }
-        .btn:hover { transform: translateY(-3px); opacity: 0.9; }
-
-        .software-tag { background: #222; padding: 8px 15px; border-radius: 5px; border: 1px solid var(--fire); margin: 5px; display: inline-block; font-size: 0.9rem; }
+        body { background-color: #0f172a; color: white; font-family: sans-serif; }
+        .gradient-text { background: linear-gradient(90deg, #ff4d4d, #f97316); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+        .video-container video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 12px; }
+        .btn-hover:hover { transform: translateY(-3px); transition: 0.3s; }
     </style>
 </head>
 <body>
 
-<header>
-    <h1 class="brand">Firediting</h1>
-    <p>Premium Video Editing & Thumbnail Design</p>
-</header>
+    <!-- Header Section -->
+    <header class="p-6 flex justify-between items-center max-w-6xl mx-auto">
+        <h1 class="text-3xl font-bold gradient-text">Firediting</h1>
+        <nav class="hidden md:block space-x-6">
+            <a href="#work" class="hover:text-orange-500">Work</a>
+            <a href="#thumbnails" class="hover:text-orange-500">Thumbnails</a>
+            <a href="#contact" class="hover:text-orange-500">Contact</a>
+        </nav>
+    </header>
 
-<div class="container">
-    <!-- 1. Featured Video (Top) -->
-    <section>
-        <h2>Featured Project</h2>
-        <div class="featured-video">
-            <!-- GitHub pe upload kari gayi video ka link yahan daalein -->
-            <video controls poster="thumb-main.jpg">
-                <source src="videos/featured-work.mp4" type="video/mp4">
+    <!-- Hero / Featured Video -->
+    <section class="max-w-5xl mx-auto p-4 mb-12">
+        <h2 class="text-xl mb-4 font-semibold text-gray-400 uppercase tracking-widest">Featured Work</h2>
+        <div class="video-container shadow-2xl border border-gray-800">
+            <!-- Replace 'featured.mp4' with your actual video filename in GitHub -->
+            <video controls poster="thumbnail-placeholder.jpg">
+                <source src="featured.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
     </section>
 
-    <!-- 2. Best Reels Grid (5-7 Reels) -->
-    <section>
-        <h2>Best Reels</h2>
-        <div class="reels-grid">
-            <div class="reel-card"><video src="videos/reel1.mp4" controls></video></div>
-            <div class="reel-card"><video src="videos/reel2.mp4" controls></video></div>
-            <div class="reel-card"><video src="videos/reel3.mp4" controls></video></div>
-            <div class="reel-card"><video src="videos/reel4.mp4" controls></video></div>
-            <div class="reel-card"><video src="videos/reel5.mp4" controls></video></div>
-            <div class="reel-card"><video src="videos/reel6.mp4" controls></video></div>
+    <!-- Softwares Section -->
+    <section class="bg-slate-900 py-10 mb-12">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <p class="text-gray-400 mb-4">Tools I Master</p>
+            <div class="flex flex-wrap justify-center gap-6 text-xl font-bold">
+                <span class="bg-gray-800 px-4 py-2 rounded-lg border border-blue-500">Premiere Pro</span>
+                <span class="bg-gray-800 px-4 py-2 rounded-lg border border-purple-500">After Effects</span>
+                <span class="bg-gray-800 px-4 py-2 rounded-lg border border-green-500">CapCut</span>
+            </div>
         </div>
     </section>
 
-    <!-- 3. Software Expertise -->
-    <section>
-        <h2>Softwares I Master</h2>
-        <div>
-            <span class="software-tag">Adobe Premiere Pro</span>
-            <span class="software-tag">Adobe After Effects</span>
-            <span class="software-tag">CapCut (Advanced)</span>
-            <span class="software-tag">Photoshop (Thumbnails)</span>
+    <!-- Reels Grid (5-7 Videos) -->
+    <section id="work" class="max-w-6xl mx-auto p-4 mb-16">
+        <h2 class="text-3xl font-bold mb-8 text-center">Best <span class="text-orange-500">Reels</span></h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <!-- Copy this block for each reel (Total 5-7) -->
+            <div class="rounded-xl overflow-hidden bg-gray-800">
+                <video class="w-full aspect-[9/16] object-cover" controls>
+                    <source src="reel1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="rounded-xl overflow-hidden bg-gray-800">
+                <video class="w-full aspect-[9/16] object-cover" controls>
+                    <source src="reel2.mp4" type="video/mp4">
+                </video>
+            </div>
+            <!-- Add more reels here -->
         </div>
     </section>
 
-    <!-- 4. Thumbnails & Contact -->
-    <section>
-        <h2>Thumbnails & Design</h2>
-        <div class="project-grid">
-            <div class="card"><img src="images/thumb1.jpg" alt="Work 1"></div>
-            <div class="card"><img src="images/thumb2.jpg" alt="Work 2"></div>
+    <!-- Thumbnail Section -->
+    <section id="thumbnails" class="max-w-6xl mx-auto p-4 mb-16">
+        <h2 class="text-3xl font-bold mb-8 text-center">Thumbnail <span class="text-orange-500">Designs</span></h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <img src="thumb1.jpg" alt="Thumbnail" class="rounded-lg shadow-lg hover:scale-105 transition">
+            <img src="thumb2.jpg" alt="Thumbnail" class="rounded-lg shadow-lg hover:scale-105 transition">
+            <img src="thumb3.jpg" alt="Thumbnail" class="rounded-lg shadow-lg hover:scale-105 transition">
         </div>
     </section>
 
-    <!-- 5. Final Contact Section -->
-    <div class="contact-section">
-        <h2>Ready to Level Up?</h2>
-        <p>Contact Firediting for your next viral project.</p>
-        <a href="https://wa.me" class="btn whatsapp">Message on WhatsApp</a>
-        <a href="mailto:firediting07@gmail.com" class="btn email">Send Email</a>
-    </div>
-</div>
+    <!-- Contact Section / CTA -->
+    <footer id="contact" class="bg-slate-900 py-20 px-4 text-center">
+        <h2 class="text-4xl font-bold mb-4">Let's Create Something <span class="text-orange-500">Epic!</span></h2>
+        <p class="text-gray-400 mb-8">Click below to start a conversation</p>
+        
+        <div class="flex flex-col md:flex-row justify-center items-center gap-4">
+            <!-- WhatsApp Button -->
+            <a href="https://wa.me..." 
+               class="btn-hover bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-full font-bold flex items-center gap-2 text-lg shadow-lg">
+                WhatsApp Me
+            </a>
 
-<footer>
-    <p style="color: #444; padding: 40px;">&copy; 2024 Firediting | All Rights Reserved</p>
-</footer>
+            <!-- Email Button -->
+            <a href="mailto:firediting07@gmail.com" 
+               class="btn-hover bg-white text-black px-8 py-4 rounded-full font-bold flex items-center gap-2 text-lg shadow-lg">
+                Send Email
+            </a>
+        </div>
+        <p class="mt-12 text-gray-600">© 2024 Firediting | All Rights Reserved</p>
+    </footer>
 
 </body>
 </html>
