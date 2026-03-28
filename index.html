@@ -1,109 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Firediting | Professional Video Editor & Designer</title>
-    <!-- Google Fonts for better look -->
+    <title>Firediting | Professional Video Editor</title>
     <link href="https://fonts.googleapis.com" rel="stylesheet">
     <style>
-        :root { --primary-color: #ff4500; --bg-dark: #0a0a0a; --card-bg: #1a1a1a; }
-        body { font-family: 'Poppins', sans-serif; margin: 0; background: var(--bg-dark); color: #fff; scroll-behavior: smooth; }
+        :root { --fire: #ff4500; --dark: #0a0a0a; --gray: #1a1a1a; }
+        body { font-family: 'Poppins', sans-serif; margin: 0; background: var(--dark); color: #fff; text-align: center; }
         
-        /* Header & Brand */
-        header { padding: 80px 20px; background: radial-gradient(circle, #331100 0%, #0a0a0a 100%); text-align: center; border-bottom: 2px solid var(--primary-color); }
-        .brand-name { font-size: 4rem; color: var(--primary-color); text-transform: uppercase; letter-spacing: 5px; margin: 0; text-shadow: 0 0 20px rgba(255, 69, 0, 0.5); }
-        .tagline { font-size: 1.2rem; color: #ccc; margin-top: 10px; }
+        header { padding: 60px 20px; background: linear-gradient(to bottom, #220000, var(--dark)); }
+        .brand { font-size: 3.5rem; color: var(--fire); text-transform: uppercase; margin: 0; text-shadow: 0 0 15px rgba(255, 69, 0, 0.6); }
 
-        .container { max-width: 1100px; margin: auto; padding: 40px 20px; }
-        h2 { font-size: 2rem; color: var(--primary-color); border-left: 5px solid var(--primary-color); padding-left: 15px; margin-bottom: 30px; }
+        .container { max-width: 1200px; margin: auto; padding: 20px; }
+        h2 { border-left: 5px solid var(--fire); padding-left: 15px; text-align: left; margin-top: 50px; }
 
-        /* Portfolio Grid */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
-        .card { background: var(--card-bg); border-radius: 15px; overflow: hidden; border: 1px solid #333; transition: 0.4s; }
-        .card:hover { transform: translateY(-10px); border-color: var(--primary-color); box-shadow: 0 10px 30px rgba(255, 69, 0, 0.2); }
-        .card iframe, .card img { width: 100%; height: 200px; border: none; display: block; }
-        .card-info { padding: 15px; font-weight: bold; }
+        /* Featured Video Area */
+        .featured-video { width: 100%; border-radius: 15px; overflow: hidden; border: 2px solid var(--fire); margin-bottom: 40px; box-shadow: 0 0 30px rgba(255, 69, 0, 0.2); }
+        video { width: 100%; display: block; background: #000; }
 
-        /* Software Icons Style */
-        .softwares { display: flex; flex-wrap: wrap; gap: 15px; margin-top: 20px; }
-        .software-tag { background: #222; padding: 12px 25px; border-radius: 8px; border-bottom: 3px solid var(--primary-color); font-weight: bold; }
+        /* Reels Grid (Vertical) */
+        .reels-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; }
+        .reel-card { background: var(--gray); border-radius: 12px; overflow: hidden; border: 1px solid #333; }
+        .reel-card video { height: 350px; object-fit: cover; }
 
-        /* Contact Section */
-        .contact-box { background: linear-gradient(135deg, #1a1a1a, #000); padding: 50px; border-radius: 20px; text-align: center; margin-top: 50px; border: 1px solid #333; }
-        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 15px 35px; margin: 10px; border-radius: 10px; text-decoration: none; font-weight: bold; color: white; transition: 0.3s; font-size: 1.1rem; }
-        .whatsapp { background: #25D366; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); }
-        .email { background: var(--primary-color); box-shadow: 0 4px 15px rgba(255, 69, 0, 0.3); }
-        .btn:hover { transform: scale(1.05); filter: brightness(1.1); }
+        /* Thumbnails & Projects */
+        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .card { background: var(--gray); border-radius: 10px; overflow: hidden; }
+        .card img { width: 100%; transition: 0.3s; }
+        .card:hover img { transform: scale(1.05); }
 
-        footer { text-align: center; padding: 40px; color: #555; font-size: 0.9rem; }
+        /* Contact Box */
+        .contact-section { background: #111; padding: 50px 20px; border-radius: 20px; margin-top: 60px; border: 1px solid var(--fire); }
+        .btn { display: inline-block; padding: 15px 35px; margin: 10px; border-radius: 8px; text-decoration: none; font-weight: bold; color: white; transition: 0.3s; }
+        .whatsapp { background: #25D366; }
+        .email { background: var(--fire); }
+        .btn:hover { transform: translateY(-3px); opacity: 0.9; }
+
+        .software-tag { background: #222; padding: 8px 15px; border-radius: 5px; border: 1px solid var(--fire); margin: 5px; display: inline-block; font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1 class="brand-name">Firediting</h1>
-    <p class="tagline">High-Energy Video Editing & Premium Thumbnails</p>
+    <h1 class="brand">Firediting</h1>
+    <p>Premium Video Editing & Thumbnail Design</p>
 </header>
 
 <div class="container">
-    <!-- Video Portfolio -->
-    <section id="work">
-        <h2>Video Showcase</h2>
-        <div class="grid">
-            <div class="card">
-                <!-- Replace VIDEO_ID with your YouTube Video ID -->
-                <iframe src="https://www.youtube.com" allowfullscreen></iframe>
-                <div class="card-info">Cinematic Edit</div>
-            </div>
-            <div class="card">
-                <iframe src="https://www.youtube.com" allowfullscreen></iframe>
-                <div class="card-info">Commercial Ad</div>
-            </div>
+    <!-- 1. Featured Video (Top) -->
+    <section>
+        <h2>Featured Project</h2>
+        <div class="featured-video">
+            <!-- GitHub pe upload kari gayi video ka link yahan daalein -->
+            <video controls poster="thumb-main.jpg">
+                <source src="videos/featured-work.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
     </section>
 
-    <!-- Thumbnail Section -->
-    <section style="margin-top: 60px;">
-        <h2>Thumbnail Portfolio</h2>
-        <div class="grid">
-            <div class="card">
-                <img src="https://via.placeholder.com" alt="Thumbnail">
-                <div class="card-info">Gaming Thumbnail</div>
-            </div>
-            <div class="card">
-                <img src="https://via.placeholder.com" alt="Thumbnail">
-                <div class="card-info">Podcast Thumbnail</div>
-            </div>
+    <!-- 2. Best Reels Grid (5-7 Reels) -->
+    <section>
+        <h2>Best Reels</h2>
+        <div class="reels-grid">
+            <div class="reel-card"><video src="videos/reel1.mp4" controls></video></div>
+            <div class="reel-card"><video src="videos/reel2.mp4" controls></video></div>
+            <div class="reel-card"><video src="videos/reel3.mp4" controls></video></div>
+            <div class="reel-card"><video src="videos/reel4.mp4" controls></video></div>
+            <div class="reel-card"><video src="videos/reel5.mp4" controls></video></div>
+            <div class="reel-card"><video src="videos/reel6.mp4" controls></video></div>
         </div>
     </section>
 
-    <!-- Software Stack -->
-    <section style="margin-top: 60px;">
-        <h2>Expertise In</h2>
-        <div class="softwares">
-            <div class="software-tag">Adobe Premiere Pro</div>
-            <div class="software-tag">Adobe After Effects</div>
-            <div class="software-tag">CapCut (Advanced)</div>
-            <div class="software-tag">Adobe Photoshop</div>
+    <!-- 3. Software Expertise -->
+    <section>
+        <h2>Softwares I Master</h2>
+        <div>
+            <span class="software-tag">Adobe Premiere Pro</span>
+            <span class="software-tag">Adobe After Effects</span>
+            <span class="software-tag">CapCut (Advanced)</span>
+            <span class="software-tag">Photoshop (Thumbnails)</span>
         </div>
     </section>
 
-    <!-- Contact Direct -->
-    <div class="contact-box">
-        <h2>Let's Work Together</h2>
-        <p>Aapke project ko "Fire" banane ke liye neeche click karein:</p>
-        <a href="https://wa.me" class="btn whatsapp">
-            Connect on WhatsApp
-        </a>
-        <a href="mailto:firediting07@://gmail.com" class="btn email">
-            Send Email Directly
-        </a>
+    <!-- 4. Thumbnails & Contact -->
+    <section>
+        <h2>Thumbnails & Design</h2>
+        <div class="project-grid">
+            <div class="card"><img src="images/thumb1.jpg" alt="Work 1"></div>
+            <div class="card"><img src="images/thumb2.jpg" alt="Work 2"></div>
+        </div>
+    </section>
+
+    <!-- 5. Final Contact Section -->
+    <div class="contact-section">
+        <h2>Ready to Level Up?</h2>
+        <p>Contact Firediting for your next viral project.</p>
+        <a href="https://wa.me" class="btn whatsapp">Message on WhatsApp</a>
+        <a href="mailto:firediting07@gmail.com" class="btn email">Send Email</a>
     </div>
 </div>
 
 <footer>
-    &copy; 2024 Firediting. All Rights Reserved.
+    <p style="color: #444; padding: 40px;">&copy; 2024 Firediting | All Rights Reserved</p>
 </footer>
 
 </body>
